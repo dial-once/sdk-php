@@ -31,7 +31,8 @@ class IVR
      * @param [string]      $caller The phone number of the caller (inter. format, with leading +)
      * @param [string]      $called The phone number called by the user (inter. format with leading +)
      */
-    public function __construct(Application $app, $caller, $called) {
+    public function __construct(Application $app, $caller, $called)
+    {
         $this->app = $app;
         $this->caller = $caller;
         $this->called = $called;
@@ -41,7 +42,8 @@ class IVR
      * Save a log for the current call to Dial Once
      * @param  string $type (can be call-start, call-end, answer-get-sms, etc.)
      */
-    public function log($type = 'call-start') {
+    public function log($type = 'call-start')
+    {
         API::post('ivr/log', array(
             'type' => $type,
             'caller' => $this->caller,
@@ -54,7 +56,8 @@ class IVR
      * @param  string (optional) $cultureISO the culture of the caller phone number (if not in international format)
      * @return boolean True/False based on the user phone number
      */
-    public function isMobile($cultureISO = '') {
+    public function isMobile($cultureISO = '')
+    {
         $isMobile = API::get('phoneNumbers/isMobile', array(
             'number' => $this->caller,
             'cultureISO' => $cultureISO
@@ -67,7 +70,8 @@ class IVR
      * Check if you should ask for the user to use or not the Dial Once service
      * @return boolean True/False based on the user Eligibility
      */
-    public function isEligible() {
+    public function isEligible()
+    {
         $isEligible = API::get('ivr/isEligible', array(
             'caller' => $this->caller,
             'called' => $this->called
@@ -79,7 +83,8 @@ class IVR
     /**
      * You should call this method if user asked to use the Dial Once service
      */
-    public function serviceRequest() {
+    public function serviceRequest()
+    {
         API::post('ivr/serviceRequest', array(
             'caller' => $this->caller,
             'called' => $this->called

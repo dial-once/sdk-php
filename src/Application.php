@@ -16,7 +16,8 @@ class Application
      * @param [string] $key     The Application key
      * @param [string] $secret  The Application secret
      */
-    public function __construct($key, $secret = NULL) {
+    public function __construct($key, $secret = NULL)
+    {
 
         if ($secret === NULL) {
             $this->token = new \StdClass();
@@ -40,7 +41,8 @@ class Application
      * Accessor to internal token string variable
      * @return [string] The access token string
      */
-    public function getAccessToken() {
+    public function getAccessToken()
+    {
         return $this->token->access_token;
     }
 }
