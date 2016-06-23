@@ -4,7 +4,9 @@ run:
 deps:
 
 lint:
-	php -l src/*
+	php -l src/API.php
+	php -l src/Application.php
+	php -l src/IVR.php
 test:
 	make lint
 	make cover
