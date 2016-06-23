@@ -3,6 +3,7 @@
     "description": "The Dial Once PHP SDK",
     "keywords": ["dialonce", "sdk"],
     "type": "library",
+    "version": "0.0.0",
     "require": {
         "php": "^5.3.0 || ^7.0"
     },
