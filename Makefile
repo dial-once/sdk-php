@@ -11,7 +11,7 @@ test:
 	make lint
 	make cover
 cover:
-	phpunit --bootstrap src/autoload.php tests --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
+	phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
 sonar:
 	sed '/sonar.projectVersion/d' ./sonar-project.properties > tmp && mv tmp sonar-project.properties
 	echo sonar.projectVersion=`cat composer.json | python -c "import json,sys;obj=json.load(sys.stdin);print obj['version'];"` >> sonar-project.properties
