@@ -1,0 +1,22 @@
+<phpunit
+        colors="true"
+        stderr="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        stopOnFailure="false"
+        bootstrap="src/autoload.php">
+    <php>
+        <env name="DIALONCE_API_URL" value="http://api.dialonce.io/"/>
+    </php>
+    <testsuites>
+        <testsuite name="Dial Once PHP SDK Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
