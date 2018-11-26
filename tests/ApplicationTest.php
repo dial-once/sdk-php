@@ -1,5 +1,5 @@
 <?php
-use phpunit\framework\TestCase;
+require './vendor/autoload.php';
 
 class ApplicationTest extends PHPUnit_Framework_TestCase {
 
@@ -22,3 +22,4 @@ class ApplicationTest extends PHPUnit_Framework_TestCase {
       $this->assertTrue($a->getAccessToken() === 'qpvao53b1x10z7u3906wvgzmvexuxwxj');
   }
 }
+?>
