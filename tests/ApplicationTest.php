@@ -1,7 +1,7 @@
 <?php
-require './vendor/autoload.php';
+use phpunit\framework\TestCase;
 
-class ApplicationTest extends PHPUnit_Framework_TestCase {
+class ApplicationTest extends TestCase {
 
   public function testConstructorApiKey()
   {
@@ -22,4 +22,3 @@ class ApplicationTest extends PHPUnit_Framework_TestCase {
       $this->assertTrue($a->getAccessToken() === 'qpvao53b1x10z7u3906wvgzmvexuxwxj');
   }
 }
-?>

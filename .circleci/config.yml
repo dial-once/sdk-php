@@ -15,4 +15,6 @@ jobs:
 
       - run: yarn install
 
-      - run: ./vendor/bin/phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
+      - run: phpunit -v
+
+      - run: php vendor/bin/phpunit tests/ApplicationsTest.php

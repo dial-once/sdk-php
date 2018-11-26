@@ -1,7 +1,7 @@
 <?php
 use phpunit\framework\TestCase;
 
-class IVRTest extends PHPUnit_Framework_TestCase {
+class IVRTest extends TestCase {
 
   private $app;
 
