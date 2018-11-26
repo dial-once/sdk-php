@@ -10,5 +10,13 @@ jobs:
       - run: sudo apt install -y libsqlite3-dev zlib1g-dev gcc make
       - run: sudo docker-php-ext-install zip
       - run: sudo composer self-update
-      - run: make test
+
+      - run: composer install -n --prefer-dist
+
+      - run: yarn install
+
+      - run: touch storage/testing.sqlite
+      - run: php artisan migrate --env=testing --database=sqlite_testing --force
+
+      - run: ./vendor/bin/phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
 
