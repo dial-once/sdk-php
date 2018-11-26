@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:5-node-browsers
+      - image: circleci/php:5.6-cli-browsers-legacy
     working_directory: ~/sdk-php
     steps:
       - checkout
@@ -15,4 +15,4 @@ jobs:
 
       - run: yarn install
 
-      - run: make test
+      - run: ./vendor/bin/phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
