@@ -1,4 +1,6 @@
 <?php
+require('vendor/autoload.php');
+
 use phpunit\framework\TestCase;
 
 class IVRTest extends TestCase {

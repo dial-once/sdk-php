@@ -1,4 +1,6 @@
 <?php
+require('vendor/autoload.php');
+
 use phpunit\framework\TestCase;
 
 class ApplicationTest extends TestCase {
