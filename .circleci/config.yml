@@ -15,6 +15,4 @@ jobs:
 
       - run: yarn install
 
-      - run: phpunit -v
-
       - run: php vendor/bin/phpunit tests/ApplicationsTest.php
