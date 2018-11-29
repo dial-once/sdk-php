@@ -10,7 +10,7 @@ test:
 	make cover
 
 cover:
-	phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
+	./vendor/bin/phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
 
 sonar:
 		sed '/sonar.projectVersion/d' ./sonar-project.properties > tmp && mv tmp sonar-project.properties
