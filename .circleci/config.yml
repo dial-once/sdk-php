@@ -12,5 +12,6 @@ jobs:
       - run: sudo composer self-update
 
       - run: composer install -n --prefer-dist
+      - run: ./vendor/bin/phpunit --version
 
       - run: ./vendor/bin/phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
