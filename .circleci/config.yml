@@ -13,6 +13,4 @@ jobs:
 
       - run: composer install -n --prefer-dist
 
-      - run: yarn install
-
       - run: ./vendor/bin/phpunit --coverage-clover coverage/lcov.info --coverage-html coverage/index.html
