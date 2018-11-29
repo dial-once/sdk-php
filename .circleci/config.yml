@@ -13,5 +13,9 @@ jobs:
 
       - run: make lint
       - run: make cover
-      - run: ls -la
-      - run: cd coverage && ls -la
+      - run:
+          when: on_fail
+          command: ls -la
+      - run:
+          when: on_fail
+          command: cd coverage && ls -la
