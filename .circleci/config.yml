@@ -7,8 +7,7 @@ jobs:
     working_directory: ~/sdk-php
     steps:
       - checkout
-      - run: sudo apt install -y libsqlite3-dev zlib1g-dev gcc make
-      - run: sudo docker-php-ext-install zip
+      - run: sudo apt install -y make
       - run: sudo composer self-update
 
       - run: composer install -n --prefer-dist
